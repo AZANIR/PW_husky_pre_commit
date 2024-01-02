@@ -7,11 +7,9 @@
     "test": "npx playwright test",
     "lint": "npx eslint ./tests --fix --color",
     "prettier": "prettier --write --ignore-unknown ./tests",
-    "lint-staged": "npm run prettier && npm run lint",
     "test-ui": "npx playwright test --ui",
     "test-debug": "npx playwright test --debug",
-    "test-codegen": "npx playwright codegen",
-    "prepare": "husky install"
+    "test-codegen": "npx playwright codegen"
   },
   "repository": {
     "type": "git",
