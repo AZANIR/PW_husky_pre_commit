@@ -16,38 +16,38 @@ npm init -y
 ### Installing the Necessary Packages:
 - **Playwright**: A framework for automated browser testing. Install latest version of Playwright and initialize it in your project directory. Add example test scripts to verify installation.
 
-```bash
-npm install playwright
-npm init playwright@latest
-"test": "npx playwright test",
-npm pkg set scripts.test-ui="npx playwright test --ui"
-npm pkg set scripts.test-debug="npx playwright test --debug"
-npm pkg set scripts.test-codegen="npx playwright codegen"
-```
+    ```bash
+    npm install playwright
+    npm init playwright@latest
+    "test": "npx playwright test",
+    npm pkg set scripts.test-ui="npx playwright test --ui"
+    npm pkg set scripts.test-debug="npx playwright test --debug"
+    npm pkg set scripts.test-codegen="npx playwright codegen"
+    ```
 
 - **ESLint**: A linter tool for identifying and reporting on patterns in JavaScript. Initialize ESLint in your project directory and configure it to suit your project’s needs.
 
-```bash
-npm install eslint --save-dev
-npm init @eslint/config
-npm pkg set scripts.lint="npx eslint ./tests --fix --color"
-```
+    ```bash
+    npm install eslint --save-dev
+    npm init @eslint/config
+    npm pkg set scripts.lint="npx eslint ./tests --fix --color"
+    ```
 
 - **Prettier**: An opinionated code formatter. Install Prettier and configure it to suit your project’s needs. Add example test scripts and rc and ignore files to verify installation.
 
-```bash
-npm install --save-dev --save-exact prettier
-node --eval "fs.writeFileSync('.prettierrc','{}\n')"
-node --eval "fs.writeFileSync('.prettierignore','# Ignore  rtifacts:\nbuild')"
-npm pkg set scripts.prettier="prettier --write --ignore-unknown ./tests"
-```
+    ```bash
+    npm install --save-dev --save-exact prettier
+    node --eval "fs.writeFileSync('.prettierrc','{}\n')"
+    node --eval "fs.writeFileSync('.prettierignore','# Ignore  rtifacts:\nbuild')"
+    npm pkg set scripts.prettier="prettier --write --ignore-unknown ./tests"
+    ```
 - **Husky**: Manages Git hooks to automate tasks like testing and linting before commits. Install Husky and initialize it in your project directory. Add example test scripts to verify installation.
 
-```bash
-npm install --save-dev husky
-npx husky install
-npx husky add .husky/pre-commit "npm run prettier && npm run lint && git push"
-```
+    ```bash
+    npm install --save-dev husky
+    npx husky install
+    npx husky add .husky/pre-commit "npm run prettier && npm run lint && git push"
+    ```
 
 ## Integration of Playwright tests
 Playwright tests simulate how a user interacts with your web application. To get set up, write test scripts in JavaScript or TypeScript and configure Playwright to suit your project's needs. This includes specifying browsers to test and defining test suites.
