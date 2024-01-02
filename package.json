@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "lint": "npx eslint ./tests --fix .ts --color",
+    "lint": "npx eslint ./tests --fix --color",
     "prettier": "npx prettier --write ./tests",
     "pre-commit": "npm run lint && npm run prettier",
     "test-ui": "npx playwright test --ui",
