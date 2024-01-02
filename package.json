@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "lint": "npx eslint tests --fix --color",
+    "lint": "npx eslint ./tests --fix --color",
     "prettier": "npx prettier --write ./tests",
     "test-ui": "npx playwright test --ui",
     "test-debug": "npx playwright test --debug",
@@ -35,14 +35,14 @@
     "@types/node": "^20.10.6",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
-    "eslint": "^8.56.0",
+    "lint": "^0.8.19",
     "husky": "^8.0.3",
-    "prettier": "^3.1.1",
-    "lint-staged": "^15.2.0"
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit":"lint-staged --relative"
+      "pre-commit": "lint-staged --relative"
     }
   },
   "lint-staged": {
