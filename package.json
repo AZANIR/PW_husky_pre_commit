@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "lint": "npx eslint ./tests --fix --color",
-    "prettier": "prettier --write --ignore-unknown ./tests",
     "test-ui": "npx playwright test --ui",
     "test-debug": "npx playwright test --debug",
-    "test-codegen": "npx playwright codegen"
+    "test-codegen": "npx playwright codegen",
+    "lint": "npx eslint ./tests --fix --color",
+    "prettier": "prettier --write --ignore-unknown ./tests"
   },
   "repository": {
     "type": "git",
