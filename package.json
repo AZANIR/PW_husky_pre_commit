@@ -50,5 +50,8 @@
       "npx run pre-commit",
       "git add"
     ]
+  },
+  "dependencies": {
+    "lint-staged": "^15.2.0"
   }
 }
