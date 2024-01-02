@@ -41,8 +41,15 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier && npm run lint && git add -A ."
+      "pre-commit":"lint-staged --relative"
     }
+  },
+  "lint-staged": {
+    "tests/**/*.{ts,js}": [
+      "npm run prettier",
+      "npm run lint",
+      "git add"
+    ]
   },
   "dependencies": {
     "lint-staged": "^15.2.0"
