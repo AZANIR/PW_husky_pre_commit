@@ -1,0 +1,48 @@
+{
+  "name": "pw_husky_pre_commit",
+  "version": "1.0.0",
+  "description": "Playwright test with husky linter and prettier pre-commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "lint": "npx eslint . --ext .ts",
+    "prettier": "npx prettier --write .",
+    "pre-commit": "npm run lint && npm run prettier",
+    "test-ui": "npx playwright test --ui",
+    "test-debug": "npx playwright test --debug",
+    "test-codegen": "npx playwright codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AZANIR/PW_husky_pre_commit.git"
+  },
+  "keywords": [
+    "playwright",
+    "husky",
+    "pre-commit",
+    "prettier",
+    "lint",
+    "test",
+    "typescript"
+  ],
+  "author": "L Maievskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AZANIR/PW_husky_pre_commit/issues"
+  },
+  "homepage": "https://github.com/AZANIR/PW_husky_pre_commit#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  }
+}
