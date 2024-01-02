@@ -1,6 +1,8 @@
 import { test, expect } from "@playwright/test";
+const title = " await page.title()";
 
 test("has title ", async ({ page }) => {
+    console.log(title);
     await page.goto("https://playwright.dev/");
 
     // Expect a title "to contain" a substring.
@@ -17,5 +19,4 @@ test("get started link", async ({ page }) => {
     await expect(
         page.getByRole("heading", { name: "Installation" }),
     ).toBeVisible();
-    // const title = await page.title();
 });
