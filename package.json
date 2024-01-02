@@ -47,7 +47,8 @@
   },
   "lint-staged": {
     "*.ts": [
-      "npx run pre-commit",
+      "npm run lint",
+      "npm run prettier",
       "git add"
     ]
   },
