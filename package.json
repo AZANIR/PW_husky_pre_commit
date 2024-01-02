@@ -37,7 +37,8 @@
     "@typescript-eslint/parser": "^6.17.0",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "lint-staged": "^15.2.0"
   },
   "husky": {
     "hooks": {
@@ -50,8 +51,5 @@
       "npm run lint",
       "git add"
     ]
-  },
-  "dependencies": {
-    "lint-staged": "^15.2.0"
   }
 }
