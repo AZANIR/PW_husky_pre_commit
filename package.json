@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
-    "lint": "npx eslint ./tests --fix --color",
+    "lint": "npx eslint tests --fix --color",
     "prettier": "npx prettier --write ./tests",
-    "pre-commit": "npm run lint && npm run prettier",
     "test-ui": "npx playwright test --ui",
     "test-debug": "npx playwright test --debug",
     "test-codegen": "npx playwright codegen"
@@ -46,9 +45,9 @@
     }
   },
   "lint-staged": {
-    "*.ts": [
-      "npm run lint",
+    "tests/**/*.{ts,js}": [
       "npm run prettier",
+      "npm run lint",
       "git add"
     ]
   },
