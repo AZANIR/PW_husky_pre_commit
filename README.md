@@ -49,7 +49,7 @@ npm init -y
     ```bash
     npm install --save-dev husky
     npx husky install
-    npx husky add .husky/pre-commit "npm run prettier && npm run lint && git push"
+    npx husky add .husky/pre-commit "npm run prettier && npm run lint"
     ```
 
 ## Integration of Playwright tests
