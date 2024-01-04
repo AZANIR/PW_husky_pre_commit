@@ -64,6 +64,8 @@ Husky intercepts Git commands to run scripts before actions such as commits. Abo
 
 ESLint and Prettier ensure that your code meets established standards. We've installed and configured ESLint to suit your project's preferences and integrated Prettier with ESLint for automatic code formatting. Added Husky to our pre-commit hook to automate validation and formatting.
 
+[Prettier rules](https://prettier.io/docs/en/options.html)
+
 ## Creating a Pre-Commit Workflow
 
 The pre-commit workflow includes automatic code formatting using Prettier and ESLint checking. When a developer initiates a commit, Husky runs these tasks. Only if all checks pass is the commit considered successful, ensuring code quality and consistency.
